@@ -26,8 +26,9 @@ pipeline {
         stage('Test') {
             steps {
                 sh 'go version'
+                sh 'go build'
                 sh ' cd /var/lib/jenkins/workspace/demo/hello '
-                sh 'go run hello.go'
+                sh 'golangci-lint run'
              }
           }
        }        
