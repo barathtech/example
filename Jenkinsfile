@@ -19,7 +19,7 @@ pipeline {
         
         stage('Build') {
             steps {
-                sh 'git url:https://github.com/barathtech/example.git, branch:'master''
+                sh 'git url: 'https://github.com/barathtech/example.git', branch:'master'
             }
         }
 
