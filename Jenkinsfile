@@ -25,7 +25,7 @@ pipeline {
 
         stage('Test') {
             steps {
-                echo 'hello'
+                sh 'apt install golang-go -y'
                 }
             }
         }        
