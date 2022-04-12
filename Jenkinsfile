@@ -25,7 +25,8 @@ pipeline {
 
         stage('Test') {
             steps {
-                sh ' install gccgo-go -y'
+                sh ' cd /var/lib/jenkins/workspace/demo/hello '
+                sh ' go run hello.go '
                 }
             }
         }        
