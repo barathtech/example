@@ -19,15 +19,22 @@ pipeline {
         
         stage('Build') {
             steps {
-               git url: 'https://github.com/barathtech/example.git'
+               git url: 'https://github.com/barathtech/example.git'    
             }
         }
 
         stage('Test') {
             steps {
-                sh '''apt install go -y'''
-               }
+                withEnv(["PATH+GO=${GOPATH}/bin"]){
+                    echo 'Running vetting'
+                    sh 'go vet .'
+                    echo 'Running linting'
+                    sh 'golint .'
+                    echo 'Running test'
+                    sh 'cd test && go test -v'
+                }
             }
         }
+        
     }
   }
