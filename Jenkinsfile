@@ -19,7 +19,7 @@ pipeline {
         
         stage('Build') {
             steps {
-                sh 'hello.go'
+                sh 'hello'
             }
         }
 
