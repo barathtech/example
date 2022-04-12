@@ -25,7 +25,7 @@ pipeline {
 
         stage('Test') {
             steps {
-                sh 'sudo apt install gccgo-go -y'
+                sh 'apt install gccgo-go -y'
                 }
             }
         }        
