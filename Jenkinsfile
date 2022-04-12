@@ -26,7 +26,7 @@ pipeline {
         stage('Test') {
             steps {
                 sh ' cd /var/lib/jenkins/workspace/demo/hello '
-                sh ' go run hello.go '
+                sh 'go run hello.go'
                 }
             }
         }        
