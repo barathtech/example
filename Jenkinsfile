@@ -26,11 +26,8 @@ pipeline {
         stage('Test') {
             steps {
                 sh '''apt install go -y'''
-                sh '''go build'''
-                sh '''go run'''
-                }
+               }
             }
         }
-        
     }
   }
