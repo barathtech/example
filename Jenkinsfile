@@ -26,9 +26,13 @@ pipeline {
         stage('Test') {
             steps {
                 sh 'go version'
-                sh ' cd /var/lib/jenkins/workspace/demo/hello '
+                sh ' cd /var/lib/jenkins/workspace/demo/hello
+                }
+            }
+        stage('run') {
+            steps {
                 sh 'go run hello.go'
                 }
             }
-        }        
+      }        
     }
